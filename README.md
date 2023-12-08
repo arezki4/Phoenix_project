@@ -1,5 +1,25 @@
 # Phoenix_project
-Projet d'implementation de cas d'usage en intelligence artificielle
+Projet d'implementation de cas d'usage en intelligence artificielle, ce projet a pour but de proposer une playliste de chansons a l'utilisateurs en fonction de son état mentale a fin d'ameliorer son humeur et d'impacter positivement certain trouble mentaux comme: la dépression, l'anxiété ...etc.
+Se projet se présente sous forme d'application web développé  à l'aide du framework django pour la UI et nous avons utilisé un modéle d'arbre de décision de la bibliothéque sklearn afin de proposer une liste de chansons à l'utilisateur
+
+## To test the app
+
+1. install django on your machine with
+```
+pip install django
+``` 
+2. Create a fork repo then you can clone your fork on your machine with:
+```
+git clone git@github.com:'yourfork-repo'/Phoenix_project.git
+```
+3. enter into the project
+```
+cd Phoenix_project/merchex
+```
+4. start the local server to run the app
+```
+python manage.py runserver
+```
 
 ## To contribute
 1. Create a fork repo then you can clone your fork on your machine with:
