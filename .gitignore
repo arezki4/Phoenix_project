@@ -4,3 +4,4 @@ env/
 __pycache__/
 *.pyo
 *.pyd
+merchex/merchex/__pycache__/
