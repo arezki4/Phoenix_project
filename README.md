@@ -1,6 +1,6 @@
 # Phoenix_project
-Projet d'implementation de cas d'usage en intelligence artificielle, ce projet a pour but de proposer une playliste de chansons a l'utilisateurs en fonction de son état mentale a fin d'ameliorer son humeur et d'impacter positivement certain trouble mentaux comme: la dépression, l'anxiété ...etc.
-Se projet se présente sous forme d'application web développé  à l'aide du framework django pour la UI et nous avons utilisé un modéle d'arbre de décision de la bibliothéque sklearn afin de proposer une liste de chansons à l'utilisateur
+Projet d'implementation de cas d'usage en intelligence artificielle, ce projet a pour but de proposer une playlist de chansons a l'utilisateur en fonction de son état mental afin d'ameliorer son humeur et d'impacter positivement certain, troubles mentaux comme: la dépression, l'anxiété ...etc.
+Ce projet se présente sous forme d'application web développé à l'aide du framework django pour la UI, nous avons utilisé un modèle d'arbre de décision de la bibliothéque sklearn afin de proposer une liste de chansons à l'utilisateur
 
 ## To test the app
 
