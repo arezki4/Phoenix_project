@@ -1,6 +1,9 @@
 from django import forms
 
 class MentalForm(forms.Form):
-   name = forms.CharField(required=False)
-   anxity_note = forms.IntegerField(min_value=0, max_value=10)
-   deprecion_note = forms.IntegerField(min_value=0, max_value=10)
+   FirstName = forms.CharField(required=False)
+   SecondName = forms.CharField(required=False)
+   Anxiety_note = forms.IntegerField(min_value=0, max_value=10)
+   Depression_note = forms.IntegerField(min_value=0, max_value=10)
+   insomnia_note = forms.IntegerField(min_value=0, max_value=10)
+   OCD_note = forms.IntegerField(min_value=0, max_value=10)
