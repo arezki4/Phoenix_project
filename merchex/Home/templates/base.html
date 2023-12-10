@@ -1,25 +1,45 @@
 {% load static %}
+
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Phoenix Health</title>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-        <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="{% static 'css/home.css' %}">
-    </head>
+<html data-bs-theme="light" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Phoenix-Project</title>
+    <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i&amp;display=swap">
+    <link rel="stylesheet" href="{% static 'assets/css/baguetteBox.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/vanilla-zoom.min.css' %}">
+</head>
+
+{% if view_selectionne == 'index' %}
     <body>
-        <header class="page-header">
-            <div class="container">
-                <h1><a href="/">Phoenix Health</a></h1>
+{% else %}
+    <body style="width: 100%;">
+{% endif %}
+    <nav class="navbar navbar-expand-lg fixed-top bg-body clean-navbar navbar-light">
+        <div class="container"><a class="navbar-brand logo" href="#">Phoenix Health</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="navbar-nav ms-auto">
+                    {% if view_selectionne == 'index' %}
+                        <li class="nav-item"><a class="nav-link active" href="">Accueil</a></li>
+                        <li class="nav-item"><a class="nav-link" href="">Mental Form</a></li>
+                    {% else %}
+                        <li class="nav-item"><a class="nav-link" href="">Accueil</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="">Mental Form</a></li>
+                    {% endif %}
+                </ul>
             </div>
-        </header>
-        <main class="content container">
-            <div class="row">
-                <div class="col">
-                    {% block content %}
-                    {% endblock %}  
-                </div>
-            </div>
-        </main>
-    </body>
+        </div>
+    </nav>
+    {% block content %}
+
+    {% endblock %}
+    <script src="{% static 'assets/bootstrap/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'assets/js/baguetteBox.min.js' %}"></script>
+    <script src="{% static 'assets/js/vanilla-zoom.js' %}"></script>
+    <script src="{% static 'assets/js/theme.js' %}"></script>
+</body>
+
 </html>
