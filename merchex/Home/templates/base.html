@@ -23,11 +23,11 @@
             <div class="collapse navbar-collapse" id="navcol-1">
                 <ul class="navbar-nav ms-auto">
                     {% if view_selectionne == 'index' %}
-                        <li class="nav-item"><a class="nav-link active" href="">Accueil</a></li>
-                        <li class="nav-item"><a class="nav-link" href="">Mental Form</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="{% url 'index' %}">Accueil</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'mental' %}">Mental Form</a></li>
                     {% else %}
-                        <li class="nav-item"><a class="nav-link" href="">Accueil</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="">Mental Form</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'index' %}">Accueil</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="{% url 'mental' %}">Mental Form</a></li>
                     {% endif %}
                 </ul>
             </div>

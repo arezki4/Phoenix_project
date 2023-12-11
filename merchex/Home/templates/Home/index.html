@@ -1,11 +1,12 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block content %}
     <main class="page landing-page">
-        <section class="clean-block clean-hero" style="background-image:url(&quot;static/assets/img/tech/image4.jpg&quot;);color:rgba(9, 162, 255, 0.85);">
+        <section class="clean-block clean-hero" style="background-image:url(&quot;{% static 'assets/img/tech/image4.jpg' %}&quot;);color:rgba(9, 162, 255, 0.85);">
             <div class="text">
                 <h2>Pourquoi remplir le formulaire ?</h2>
-                <p>La musique que vous écoutez peut vous influencer.<br>Elle peut drastiquement changer votre humeur.<br><br>Afin de vous aidez au mieux a contrôler votre humeur via la musique, nous vous prions de remplir les formulaires suivant, qui nous permettrons a l'avenir de vous proposer des playlist qui vous améliorerons votre mental.</p><button class="btn btn-outline-light btn-lg" type="button">Mental Form</button>
+                <p><b>La musique que vous écoutez peut vous influencer.<br>Elle peut drastiquement changer votre humeur.<br><br>Afin de vous aidez au mieux a contrôler votre humeur via la musique, nous vous prions de remplir les formulaires suivant, qui nous permettrons a l'avenir de vous proposer des playlist qui vous améliorerons votre mental.</b></p><a class="btn btn-outline-light btn-lg" type="button" href= "{% url 'mental' %}">Mental Form</a>
             </div>
         </section>
         <section class="clean-block clean-info dark">
