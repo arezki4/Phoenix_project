@@ -9,35 +9,6 @@
                     <h2 class="text-info">Mental Form</h2>
                     <p>Ce formulaire a pour objectif d'évaluer votre bien être avec votre consommation actuelle de musique</p>
                 </div>
-                {% comment %} <form>
-                    <div class="mb-3"><label class="form-label" for="name">First Name</label><input class="form-control" type="text" id="name" name="name" data-bs-theme="light" required="" minlength="2" maxlength="15"></div>
-                    <div class="mb-3"><label class="form-label" for="subject">Last Name</label><input class="form-control" type="text" id="subject" name="subject" data-bs-theme="light" required="" minlength="2" maxlength="15"></div>
-                    <div class="mb-3"><label class="form-label" for="email">Email</label><input class="form-control" type="email" id="email" name="email" data-bs-theme="light" required="" maxlength="30"></div>
-                    <label class="form-label">Age</label><input class="form-control" type="number" min="13" max="100" required="">
-                    <label class="form-label">Pays de résidence</label>
-                    <select class="form-select form-select-sm" required="">
-                        <option value="12" selected="">France</option>
-                        <option value="13">This is item 2</option>
-                        <option value="14">This is item 3</option>
-                    </select>
-                    <hr><label class="form-label" for="message">Quel est votre genre préféré ?</label><select class="form-select form-select-sm" required="">
-                        <option value="13">This is item 2</option>
-                        <option value="14">This is item 3</option>
-                    </select>
-                    <label class="form-label">Combien d'heure écouter vous de la musique par jour ?</label>
-                    <input class="form-control" type="time" required="" min="0" max="24">
-                    <label class="form-label">Comprenez vous les paroles des musiques que vous écoutez ?</label><select class="form-select form-select-sm" required="">
-                        <option value="12" selected="">Oui</option>
-                        <option value="12">Souvent</option>
-                        <option value="13">Non</option>
-                        <option value="14">Rarement</option>
-                    </select>
-                    <div class="mb-3">
-                        <hr><label class="form-label" for="message">Evaluez votre anxiété après votre écoute</label><input class="form-range" type="range" min="0" max="10" value="5" step="1" required="">
-                    </div><label class="form-label" for="message">Evaluez votre dépression après votre écoute</label><input class="form-range" type="range" min="0" max="10" value="5" step="1" required=""><label class="form-label" for="message">Evaluez votre insomnie après votre écoute</label><input class="form-range" type="range" min="0" max="10" value="5" step="1" required=""><label class="form-label" for="message">Evaluez vos TOC après votre écoute</label><input class="form-range" type="range" min="0" max="10" value="5" step="1" required="">
-                    <hr>
-                    <div class="mb-3"><button class="btn btn-primary btn-sm" type="submit">Envoyer</button></div>
-                </form> {% endcomment %}
                 <form action="" method="post" novalidate>
                     {% csrf_token %}
                     {% bootstrap_field form.FirstName %}
