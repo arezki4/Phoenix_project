@@ -3,34 +3,34 @@ import pycountry
 
 COUNTRY_CHOICES = sorted([(country.alpha_2, (country.name)) for country in pycountry.countries if not hasattr(country, 'subdivisions')], key=lambda x: x[1])
 GENRE_CHOICES = [
-   ('classique', 'Classique'),
-   ('country', 'Country'),
+   ('cl', 'Classique'),
+   ('co', 'Country'),
    ('edm', 'EDM'),
-   ('folk', 'Folk'),
-   ('gospel', 'Gospel'),
-   ('hip_hop', 'Hip Hop'),
-   ('jazz', 'Jazz'),
-   ('k_pop', 'Kpop'),
-   ('latin', 'Latin'),
-   ('lofi', 'Lofi'),
-   ('metal', 'Metal'),
-   ('pop', 'Pop'),
+   ('f', 'Folk'),
+   ('g', 'Gospel'),
+   ('hh', 'Hip Hop'),
+   ('j', 'Jazz'),
+   ('kp', 'Kpop'),
+   ('la', 'Latin'),
+   ('lo', 'Lofi'),
+   ('m', 'Metal'),
+   ('p', 'Pop'),
    ('r&b', 'R&B'),
    ('rap', 'RAP'),
-   ('rock', 'Rock'),
+   ('r', 'Rock'),
    ('vgm', 'Video game music')
 ]
 
 PAROLE_CHOISES = [
-   ('oui', 'Oui'),
-   ('souvent', 'Souvent'),
-   ('non', 'Non'),
-   ('rarement', 'Rarement')
+   ('o', 'Oui'),
+   ('s', 'Souvent'),
+   ('n', 'Non'),
+   ('r', 'Rarement')
 ]
 
 class MentalForm(forms.Form):
-   FirstName = forms.CharField(label='First Name', min_length=2, max_length=15, required=True)
-   LastName = forms.CharField(label='Last Name', min_length=2, max_length=15, required=True)
+   FirstName = forms.CharField(label='Prénom', min_length=2, max_length=15, required=False)
+   LastName = forms.CharField(label='Nom', min_length=2, max_length=15, required=False)
    Email = forms.EmailField(label='Email', max_length=30, required=True)
    Age = forms.IntegerField(label='Age', min_value=13, max_value=100, required=True)
    Pays_de_residence = forms.ChoiceField(label='Pays de résidence', widget=forms.Select, choices=COUNTRY_CHOICES, required=True)
