@@ -1,4 +1,5 @@
 env/
+.venv/
 # Django cache
 *.pyc
 __pycache__/
