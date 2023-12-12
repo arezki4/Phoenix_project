@@ -1,0 +1,8 @@
+env/
+.venv/
+# Django cache
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+merchex/merchex/__pycache__/
