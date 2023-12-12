@@ -23,7 +23,10 @@
                     <hr><label class="form-label" for="message">Quel est votre genre préféré ?</label><select class="form-select form-select-sm" required="">
                         <option value="13">This is item 2</option>
                         <option value="14">This is item 3</option>
-                    </select><label class="form-label">Combien d'heure écouter vous de la musique par jour ?</label><input class="form-control" type="time" required="" min="0" max="24"><label class="form-label">Comprenez vous les paroles des musiques que vous écoutez ?</label><select class="form-select form-select-sm" required="">
+                    </select>
+                    <label class="form-label">Combien d'heure écouter vous de la musique par jour ?</label>
+                    <input class="form-control" type="time" required="" min="0" max="24">
+                    <label class="form-label">Comprenez vous les paroles des musiques que vous écoutez ?</label><select class="form-select form-select-sm" required="">
                         <option value="12" selected="">Oui</option>
                         <option value="12">Souvent</option>
                         <option value="13">Non</option>
@@ -37,12 +40,23 @@
                 </form> {% endcomment %}
                 <form action="" method="post" novalidate>
                     {% csrf_token %}
-                    {% bootstrap_form form %}
-                    {% buttons %}
-                        <button type="submit" class="btn btn-primary">
-                            Envoyer
-                        </button>
-                    {% endbuttons %}
+                    {% bootstrap_field form.FirstName %}
+                    {% bootstrap_field form.LastName %}
+                    {% bootstrap_field form.Email %}
+                    {% bootstrap_field form.Age %}
+                    {% bootstrap_field form.Pays_de_residence %}
+                    <hr>
+                    {% bootstrap_field form.Genre_preferer %}
+                    {% bootstrap_field form.Heure_ecoute %}
+                    {% bootstrap_field form.Paroles %}
+                    <hr>
+                    {% bootstrap_field form.Anxiety_evaluation %}
+                    {% bootstrap_field form.Depression_evaluation %}
+                    {% bootstrap_field form.insomnia_evaluation %}
+                    {% bootstrap_field form.OCD_evaluation %}
+                    <button type="submit" class="btn btn-primary btn-sm">
+                        Envoyer
+                    </button>
                 </form>
             </div>
         </section>
