@@ -4,9 +4,14 @@ Ce projet se présente sous forme d'application web développé à l'aide du fra
 
 ## To test the app
 
-1. install django on your machine with
+1. install django and other library on your machine with
 ```
-pip install django
+pip3 install django
+
+pip3 install django-bootstrap-v5
+
+pip3 install pycountry
+
 ``` 
 2. Create a fork repo then you can clone your fork on your machine with:
 ```
