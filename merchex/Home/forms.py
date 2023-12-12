@@ -20,6 +20,7 @@ GENRE_CHOICES = [
    ('rock', 'Rock'),
    ('vgm', 'Video game music')
 ]
+
 PAROLE_CHOISES = [
    ('oui', 'Oui'),
    ('souvent', 'Souvent'),
@@ -44,7 +45,7 @@ class MentalForm(forms.Form):
    Anxiety_evaluation = forms.IntegerField(
         label="Évaluez votre anxiété après votre écoute",
         widget=forms.TextInput(attrs={
-            'class': 'form-range',
+            'class': 'form-range border-0',
             'type': 'range',
             'min': '0',
             'max': '10',
@@ -56,7 +57,7 @@ class MentalForm(forms.Form):
    Depression_evaluation = forms.IntegerField(
         label="Evaluez votre dépression après votre écoute",
         widget=forms.TextInput(attrs={
-            'class': 'form-range',
+            'class': 'form-range border-0',
             'type': 'range',
             'min': '0',
             'max': '10',
@@ -68,7 +69,7 @@ class MentalForm(forms.Form):
    insomnia_evaluation = forms.IntegerField(
         label="Evaluez votre insomnie après votre écoute",
         widget=forms.TextInput(attrs={
-            'class': 'form-range',
+            'class': 'form-range border-0',
             'type': 'range',
             'min': '0',
             'max': '10',
@@ -80,7 +81,7 @@ class MentalForm(forms.Form):
    OCD_evaluation = forms.IntegerField(
         label="Evaluez vos TOC après votre écoute",
         widget=forms.TextInput(attrs={
-            'class': 'form-range',
+            'class': 'form-range border-0',
             'type': 'range',
             'min': '0',
             'max': '10',
