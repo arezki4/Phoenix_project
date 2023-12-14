@@ -9,4 +9,6 @@ def mental(request):
     form = MentalForm()  # ajout d’un nouveau formulaire ici
     if (request.method == "POST"):
         form = MentalForm(request.POST)
+        form.save()
+
     return render(request, 'Home/form.html', {'form': form})  # passe ce formulaire au gabarit
