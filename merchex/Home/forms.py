@@ -22,7 +22,7 @@ class MentalForm(forms.ModelForm):
     )
 
     depression = forms.IntegerField(
-        label="Évaluez votre anxiété après votre écoute",
+        label="Évaluez votre dépression après votre écoute",
         widget=forms.NumberInput(attrs={
             'class': 'form-range border-0',
             'type': 'range',
@@ -35,7 +35,7 @@ class MentalForm(forms.ModelForm):
     )
 
     insomnia = forms.IntegerField(
-        label="Evaluez votre dépression après votre écoute",
+        label="Evaluez votre insomnie après votre écoute",
         widget=forms.NumberInput(attrs={
             'class': 'form-range border-0',
             'type': 'range',
