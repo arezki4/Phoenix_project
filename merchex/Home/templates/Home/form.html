@@ -40,20 +40,20 @@
                 </form> {% endcomment %}
                 <form action="" method="post" novalidate>
                     {% csrf_token %}
-                    {% bootstrap_field form.FirstName %}
-                    {% bootstrap_field form.LastName %}
-                    {% bootstrap_field form.Email %}
-                    {% bootstrap_field form.Age %}
-                    {% bootstrap_field form.Pays_de_residence %}
+                    {% bootstrap_field form.surname %}
+                    {% bootstrap_field form.lastname %}
+                    {% bootstrap_field form.email %}
+                    {% bootstrap_field form.birthdate %}
+                    {% bootstrap_field form.country %}
                     <hr>
-                    {% bootstrap_field form.Genre_preferer %}
-                    {% bootstrap_field form.Heure_ecoute %}
-                    {% bootstrap_field form.Paroles %}
+                    {% bootstrap_field form.genre %}
+                    {% bootstrap_field form.hoursperday %}
+                    {% bootstrap_field form.foreign %}
                     <hr>
-                    {% bootstrap_field form.Anxiety_evaluation %}
-                    {% bootstrap_field form.Depression_evaluation %}
-                    {% bootstrap_field form.insomnia_evaluation %}
-                    {% bootstrap_field form.OCD_evaluation %}
+                    {% bootstrap_field form.anxiety %}
+                    {% bootstrap_field form.depression %}
+                    {% bootstrap_field form.insomnia %}
+                    {% bootstrap_field form.ocd %}
                     <button type="submit" class="btn btn-primary btn-sm">
                         Envoyer
                     </button>
