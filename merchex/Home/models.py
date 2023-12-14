@@ -34,7 +34,7 @@ class MentalBase(models.Model):
     timestamp = models.DateField(auto_now=True, verbose_name='Heure à laquelle le formulaire a été complété')
     surname = models.CharField(max_length=15, verbose_name='Prénom')
     lastname = models.CharField(max_length=15, verbose_name='Nom')
-    email = models.EmailField(max_length=50, unique=True, verbose_name="Adresse mail")
+    email = models.EmailField(max_length=50, verbose_name="Adresse mail")
     birthdate = models.DateField(verbose_name='Date de naissance')
     country = models.CharField(max_length=2, choices=COUNTRY_CHOICES,verbose_name='Pays de résidence')
     genre = models.CharField(max_length=3, choices=GENRE_CHOICES,verbose_name='Quel est votre genre préféré ?')

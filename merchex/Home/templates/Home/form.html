@@ -10,6 +10,17 @@
                     <p>Ce formulaire a pour objectif d'évaluer votre bien être avec votre consommation actuelle de musique</p>
                 </div>
                 <form action="" method="post" novalidate>
+                    {% if message_success != '' %}
+                        <div class="alert alert-success">
+                            <strong>{{ message_success }}</strong>
+                        </div>
+                    {% endif %}
+
+                    {% if message_fail != '' %}
+                        <div class="alert alert-danger">
+                            <strong>{{ message_fail }}</strong>
+                        </div>
+                    {% endif %}
                     {% csrf_token %}
                     {% bootstrap_field form.surname %}
                     {% bootstrap_field form.lastname %}
